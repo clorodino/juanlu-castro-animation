@@ -1,0 +1,18 @@
+---
+interface Props {
+  url: string;
+  image: string;
+}
+const { url, image } = Astro.props;
+---
+
+<div>
+  <a class="relative" href={url}>
+    <p
+      class="w-full h-full hover:transition-all hover:bg-white/70 dark:hover:bg-slate-900/70 absolute rounded-lg flex justify-center items-center text-slate-500 dark:text-slate-50 text-opacity-0 dark:text-opacity-0 hover:text-opacity-100 dark:hover:text-opacity-100 hover:text-xl ease-in-out delay-75 duration-500 hover:backdrop-blur-sm"
+    >
+      Project name
+    </p>
+    <img class="h-auto max-w-full rounded-lg" src={image} alt="" />
+  </a>
+</div>
