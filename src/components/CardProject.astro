@@ -2,17 +2,18 @@
 interface Props {
   url: string;
   image: string;
+  title: string;
 }
-const { url, image } = Astro.props;
+const { url, image, title } = Astro.props;
 ---
 
-<div>
+<div class="rounded-lg overflow-hidden">
   <a class="relative" href={url}>
     <p
-      class="w-full h-full hover:transition-all hover:bg-white/70 dark:hover:bg-slate-900/70 absolute rounded-lg flex justify-center items-center text-slate-500 dark:text-slate-50 text-opacity-0 dark:text-opacity-0 hover:text-opacity-100 dark:hover:text-opacity-100 hover:text-xl ease-in-out delay-75 duration-500 hover:backdrop-blur-sm"
+      class="w-full h-full hover:transition-all hover:bg-white/70 dark:hover:bg-slate-900/70 absolute flex justify-center items-center text-slate-900 dark:text-slate-50 text-opacity-0 dark:text-opacity-0 hover:text-opacity-100 dark:hover:text-opacity-100 font-light text-[20px] hover:text-2xl ease-in-out delay-75 duration-500 hover:backdrop-blur-sm font-mono tracking-wider"
     >
-      Project name
+      {title}
     </p>
-    <img class="h-auto max-w-full rounded-lg" src={image} alt="" />
+    <img class="h-auto max-w-full p-8 bg-white" src={image} alt="" />
   </a>
 </div>

@@ -1,32 +1,71 @@
 ---
 import CardProject from "./CardProject.astro";
+import Grid from "./Grid.astro";
 ---
 
 <div class="flex max-w-screen-xl py-5" id="container">
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <div class="grid gap-4">
-      <CardProject url="/yps" image="src/assets/img/00-YPS_port.gif" />
-      <CardProject url="/" image="src/assets/img/Ident-Port-3.gif" />
-      <CardProject url="/" image="src/assets/img/Reel_Port-1.gif" />
-      <CardProject url="/" image="src/assets/img/Gif_Port.gif" />
-    </div>
-    <div class="grid gap-4">
-      <CardProject url="/" image="src/assets/img/Reel_Port-1.gif" />
-      <CardProject url="/" image="src/assets/img/Gif_Port.gif" />
-      <CardProject url="/" image="src/assets/img/Ident-Port-3.gif" />
-      <CardProject url="/" image="src/assets/img/00-YPS_port.gif" />
-    </div>
-    <div class="grid gap-4">
-      <CardProject url="/" image="src/assets/img/00-YPS_port.gif" />
-      <CardProject url="/" image="src/assets/img/Ident-Port-3.gif" />
-      <CardProject url="/" image="src/assets/img/Reel_Port-1.gif" />
-      <CardProject url="/" image="src/assets/img/Gif_Port.gif" />
-    </div>
-    <div class="grid gap-4">
-      <CardProject url="/" image="src/assets/img/Reel_Port-1.gif" />
-      <CardProject url="/" image="src/assets/img/Gif_Port.gif" />
-      <CardProject url="/" image="src/assets/img/Ident-Port-3.gif" />
-      <CardProject url="/" image="src/assets/img/00-YPS_port.gif" />
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <Grid grid={1}>
+      <CardProject
+        title="Your planet sucks"
+        url="/yps"
+        image="src/assets/img/00-YPS_port.gif"
+      />
+      <CardProject
+        title="JC Ident"
+        url="/"
+        image="src/assets/img/Ident-Port-3.gif"
+      />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/Reel_Port-1.gif"
+      />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/Gif_Port.gif"
+      />
+    </Grid>
+    <Grid grid={1}>
+      <CardProject
+        title="JC Ident"
+        url="/"
+        image="src/assets/img/Reel_Port-1.gif"
+      />
+      <CardProject title="Loops" url="/" image="src/assets/img/Gif_Port.gif" />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/Ident-Port-3.gif"
+      />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/00-YPS_port.gif"
+      />
+    </Grid>
+    <Grid grid={1}>
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/00-YPS_port.gif"
+      />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/Ident-Port-3.gif"
+      />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/Reel_Port-1.gif"
+      />
+      <CardProject
+        title="Your planet sucks"
+        url="/"
+        image="src/assets/img/Gif_Port.gif"
+      />
+    </Grid>
   </div>
 </div>
