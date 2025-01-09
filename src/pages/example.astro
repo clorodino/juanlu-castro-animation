@@ -1,0 +1,37 @@
+---
+import Video from "../components/Video.astro";
+import PostImage from "../components/PostImage.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="flex flex-col justify-start max-w-screen-xl px-4 gap-2 ">
+    <h1 class="text-3xl font-semibold pt-10 pb-5">Project Name</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero nulla quibusdam atque hic aperiam, soluta aliquid adipisci dolores necessitatibus id, error dicta eius facere quisquam sit eligendi quia nesciunt!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero nulla quibusdam atque hic aperiam, soluta aliquid adipisci dolores necessitatibus id, error dicta eius facere quisquam sit eligendi quia nesciunt!
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 py-1">
+      <PostImage scr="/src//assets/img/Reel_Port-1.gif" title="random dog" />
+      <PostImage scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg" title="random dog" />
+      <PostImage scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg" title="random dog" />
+    </div>
+    <div class="grid grid-cols-2 gap-4 py-1">
+      <PostImage scr="/src//assets/img/Reel_Port-1.gif" title="random dog" />
+      <PostImage scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg" title="random dog" />
+    </div>
+    <Video url="https://player.vimeo.com/video/419854143?h=e571663f9c" image="/src/assets/img/reel-poster.png" title="Video Reel"  />
+    <h2 class="text-xl font-semibold pt-10 pb-5">Credits</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero nulla quibusdam atque hic aperiam, soluta aliquid adipisci dolores necessitatibus id, error dicta eius facere quisquam sit eligendi quia nesciunt!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vero nulla quibusdam atque hic aperiam, soluta aliquid adipisci dolores necessitatibus id, error dicta eius facere quisquam sit eligendi quia nesciunt!
+    </p>
+
+
+  </div>
+</Layout>
