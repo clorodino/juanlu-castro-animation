@@ -1,26 +1,23 @@
 ---
-
-import TextReveal from './TextReveal.astro';
+import TextReveal from "./TextReveal.astro";
 interface Props {
   url: string;
   image: string;
   title: string;
 }
 const { url, image, title } = Astro.props;
-
 ---
 
 <div class="rounded-lg overflow-hidden">
-  <a class="relative" href={url}>
+  <a class="relative bg-white flex justify-center" href={url}>
     <p
-      class="w-full h-full hover:transition-all hover:bg-white/70 dark:hover:bg-slate-900/70 absolute flex justify-center items-center text-slate-900 dark:text-slate-50 text-opacity-0 dark:text-opacity-0 hover:text-opacity-100 dark:hover:text-opacity-100 font-light text-[20px] hover:text-2xl ease-in-out delay-75 duration-500 hover:backdrop-blur-sm font-mono tracking-wider"
+      class="w-full h-full hover:transition-all hover:bg-white/70 dark:hover:bg-gray-900/70 absolute flex justify-center items-center text-gray-900 dark:text-gray-50 text-opacity-0 dark:text-opacity-0 hover:text-opacity-100 dark:hover:text-opacity-100 font-light text-[20px] hover:text-2xl ease-in-out delay-75 duration-500 hover:backdrop-blur-sm font-mono tracking-wider px-4 text-center"
     >
-    <span>
-
-      {title}
-    </span>
+      <span>
+        {title}
+      </span>
     </p>
 
-    <img class="h-auto max-w-full p-8 bg-white" src={image} alt="" />
+    <img class="h-auto max-w-full p-4 bg-white" src={image} alt="" />
   </a>
 </div>

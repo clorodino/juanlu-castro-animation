@@ -10,10 +10,10 @@ export default {
       keyframes: {
         "text-reveal": {
           "0%": {
-            transform: "translate(0, 100%)",
+            transform: "trangray(0, 100%)",
           },
           "100%": {
-            transform: "translate(0, 0)",
+            transform: "trangray(0, 0)",
           },
         },
       },
@@ -21,4 +21,3 @@ export default {
   },
   plugins: [],
 };
-

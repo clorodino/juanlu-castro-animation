@@ -4,17 +4,16 @@ interface Props {
   image: string;
   title: string;
   isPostVideo?: boolean;
-  newClass?: string
+  newClass?: string;
 }
 const { url, image, title, isPostVideo, newClass } = Astro.props;
 ---
 
 <div
   class:list={[
-       newClass,
+    newClass,
     {
       "": isPostVideo,
-   
     },
   ]}
   class="w-full aspect-video max-w-screen-lg relative"
@@ -27,7 +26,7 @@ const { url, image, title, isPostVideo, newClass } = Astro.props;
     class="w-full z-20 h-full absolute top-0 flex justify-center items-center"
   >
     <button
-      class="bg-slate-900/70 w-24 h-24 rounded-full text-slate-50 text-4xl play-button hide"
+      class="bg-gray-900/70 w-24 h-24 rounded-full text-gray-50 text-4xl play-button hide"
       >▷</button
     >
   </div>
