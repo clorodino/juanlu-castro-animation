@@ -1,14 +1,16 @@
 ---
-import Video from "../components/Video.astro";
-import PostImage from "../components/PostImage.astro";
-import Layout from "../layouts/Layout.astro";
-import Grid from "../components/Grid.astro";
-import Paragraphs from "../components/Paragraphs.astro";
+import Video from "../../components/Video.astro";
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+
 ---
 
 <Layout>
-  <div class="flex flex-col justify-center items-center max-w-screen-xl gap-4">
+  <div class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24">
     <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">Allianz</h1>
+    <!-- <TextReveal text="Hello"/> -->
     <Paragraphs>
       <p>
         Allianz is an insurance company who wanted to do several infographics
@@ -16,6 +18,12 @@ import Paragraphs from "../components/Paragraphs.astro";
         animations for all these cases. Here there is a selection of them.
       </p>
     </Paragraphs>
+    <iframe
+    class="w-full aspect-video rounded-xl max-w-screen-lg"
+    src="https://player.vimeo.com/video/504275015?badge=0&autopause=0&player_id=0&app_id=58479"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+    title="Weird Walk">
+  </iframe>
     <Grid grid={3}>
       <PostImage scr="/src//assets/img/Reel_Port-1.gif" title="random dog" />
       <PostImage
@@ -27,12 +35,6 @@ import Paragraphs from "../components/Paragraphs.astro";
         title="random dog"
       />
     </Grid>
-    <iframe
-      class="w-full aspect-video max-w-screen-xl rounded-xl"
-      src="https://player.vimeo.com/video/504275015?badge=0&autopause=0&player_id=0&app_id=58479"
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-      title="Weird Walk"></iframe>
-
     <Video
       isPostVideo={true}
       url="https://player.vimeo.com/video/419854143?h=e571663f9c"
@@ -42,10 +44,11 @@ import Paragraphs from "../components/Paragraphs.astro";
     <div class="pt-10 pb-5 flex flex-col justify-center items-center">
       <h2 class="text-2xl font-mono font-normal pb-5">Credits</h2>
       <Paragraphs>
-        <p>
-          <span class="text-lg text-slate-500 font-light"
-            >Illustration and animation:</span
-          > Juan Luis Castro
+        <p class="text-sm text-slate-500 font-light text-center">
+         Direction, design, animation & sound:</p
+          > 
+          <p class="text-center" 
+          >Juan Luis Castro
         </p>
       </Paragraphs>
     </div>

@@ -3,18 +3,21 @@ interface Props {
   url: string;
   image: string;
   title: string;
-  isPostVideo: boolean;
+  isPostVideo?: boolean;
+  newClass?: string
 }
-const { url, image, title, isPostVideo } = Astro.props;
+const { url, image, title, isPostVideo, newClass } = Astro.props;
 ---
 
 <div
   class:list={[
+       newClass,
     {
       "": isPostVideo,
+   
     },
   ]}
-  class="w-full aspect-video max-w-screen-xl relative"
+  class="w-full aspect-video max-w-screen-lg relative"
 >
   <video id="video" class="rounded-xl" poster={image}>
     <source src={url} type="video/mp4" />

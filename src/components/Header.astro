@@ -3,7 +3,7 @@ import ToggleTheme from "./ToggleTheme.astro";
 import NavLink from "./NavLink.astro";
 ---
 
-<header class="flex justify-between w-full max-w-screen-xl items-center py-7">
+<nav class="fixed z-50 bg-white dark:bg-slate-900 flex justify-between w-screen -mx-4 px-4 max-w-screen-xl items-center py-7 ">
   <a href="/">
     <img
       class="max-w-28 flex justify-center items-center"
@@ -11,9 +11,9 @@ import NavLink from "./NavLink.astro";
       alt="logo"
     />
   </a>
-  <nav class="flex gap-8 items-center font-mono text-2xl tracking-wider">
+  <ul class="flex gap-8 items-center font-mono text-2xl tracking-wider">
     <NavLink link="/about" title="About" />
     <NavLink link="/" title="Work" />
     <ToggleTheme />
-  </nav>
-</header>
+  </ul>
+</nav>
