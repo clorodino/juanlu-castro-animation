@@ -3,20 +3,23 @@ import PostImage from "../../components/PostImage.astro";
 import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
+import { GET, type dataItem } from "../api/data.json";
+
+const response = await GET(Astro);
+const data = await response.json();
+const projectData =  data.filter((item: dataItem) => item.url === "/projects/weird-walk");
+const {title, description, credits} = projectData[0]
 ---
 
 <Layout>
   <div
     class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
   >
-    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">Weird Walk</h1>
+    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">{title}</h1>
     <Paragraphs>
-      <p>
-        Weird Walk is a piece made from several loops posted on Instagram. The
-        main intention was to make an "exquisite corpse", posting a clip based
-        on the previous every two days. Finally, I made the entire composition
-        with all the clips, creating a big loop.
-      </p>
+      {description.map((paragraph: string)=>(
+        <p>{paragraph}</p>
+      ))}
     </Paragraphs>
     <iframe
       class="w-full aspect-video rounded-xl max-w-screen-lg"
@@ -42,7 +45,7 @@ import Paragraphs from "../../components/Paragraphs.astro";
         <p class="text-sm text-gray-500 font-light text-center">
           Direction, design, animation & sound:
         </p>
-        <p class="text-center">Juan Luis Castro</p>
+        <p class="text-center"> {credits.direction}</p>
       </Paragraphs>
     </div>
   </div>

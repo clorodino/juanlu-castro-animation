@@ -1,7 +1,63 @@
 ---
+import PostImage from "../../components/PostImage.astro";
 import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+import { GET, type dataItem } from "../api/data.json";
+
+const response = await GET(Astro);
+const data = await response.json();
+const projectData =  data.filter((item: dataItem) => item.url === "/projects/your-planet-sucks");
+const {title, description, credits} = projectData[0]
+
 ---
 
 <Layout>
-  <div>Your planet sucks</div>
+  <div
+    class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
+  >
+    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">{title}</h1>
+    <Paragraphs>
+      {description.map((paragraph: string)=>(
+        <p>{paragraph}</p>
+      ))}
+    </Paragraphs>
+    <iframe
+      class="w-full aspect-video rounded-xl max-w-screen-lg"
+      src="https://player.vimeo.com/video/504275015?badge=0&autopause=0&player_id=0&app_id=58479"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+      title="Weird Walk"
+    >
+    </iframe>
+    <Grid grid={3}>
+      <PostImage scr="/src//assets/img/Reel_Port-1.gif" title="random dog" />
+      <PostImage
+        scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg"
+        title="random dog"
+      />
+      <PostImage
+        scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg"
+        title="random dog"
+      />
+    </Grid>
+    <div class="mt-12 mb-5 flex flex-col justify-center items-center">
+      <h2 class="text-2xl font-mono font-normal mb-5">Credits</h2>
+      {
+        credits.direction && (<Paragraphs>
+        <p class="text-sm text-gray-500 font-light text-center">
+          direction
+        </p>
+        <p class="text-center">{credits.direction}:</p>
+      </Paragraphs>)
+      }
+      {
+        credits.design && (<Paragraphs>
+        <p class="text-sm text-gray-500 font-light text-center">
+        design & animation
+        </p>
+        <p class="text-center">{credits.design}:</p>
+      </Paragraphs>)
+      }s
+</div>
+  </div>
 </Layout>

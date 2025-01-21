@@ -2,12 +2,12 @@
 import CardProject from "./CardProject.astro";
 import { GET, type dataItem } from "../pages/api/data.json";
 
-let response = await GET(Astro);
+const response = await GET(Astro);
 const data = await response.json();
 ---
 
 <div class="flex max-w-screen-xl py-5" id="container">
-  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+  <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
     {
       data.map(({ title, url, images }: dataItem) => (
         <CardProject title={title} url={url} image={images.port} />
