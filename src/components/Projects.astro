@@ -4,12 +4,16 @@ import { GET, type dataItem } from "../pages/api/data.json";
 
 const response = await GET(Astro);
 const data = await response.json();
+
+const projectsOrder = data.sort(function (a: any, b: any) {
+  return a.id - b.id;
+});
 ---
 
 <div class="flex max-w-screen-xl py-5" id="container">
   <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
     {
-      data.map(({ title, url, images }: dataItem) => (
+      projectsOrder.map(({ title, url, images }: dataItem) => (
         <CardProject title={title} url={url} image={images.port} />
       ))
     }

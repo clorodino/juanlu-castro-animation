@@ -1,12 +1,16 @@
 ---
 interface Props {
-  url: string;
-  image: string;
+  src: string;
+  poster?: string;
   title: string;
   isPostVideo?: boolean;
   newClass?: string;
+  autoplay?: boolean;
+  rounded?: boolean;
+  loop?: boolean;
 }
-const { url, image, title, isPostVideo, newClass } = Astro.props;
+const { src, poster, title, isPostVideo, newClass, autoplay, rounded, loop } =
+  Astro.props;
 ---
 
 <div
@@ -18,18 +22,27 @@ const { url, image, title, isPostVideo, newClass } = Astro.props;
   ]}
   class="w-full aspect-video max-w-screen-lg relative"
 >
-  <video id="video" class="rounded-xl" poster={image}>
-    <source src={url} type="video/mp4" />
-  </video>
-  <div
-    id="video-player"
-    class="w-full z-20 h-full absolute top-0 flex justify-center items-center"
+  <video
+    id="video"
+    class={rounded ? "rounded-xl" : ""}
+    poster={poster}
+    autoplay={autoplay}
+    loop={loop}
   >
-    <button
-      class="bg-gray-900/70 w-24 h-24 rounded-full text-gray-50 text-4xl play-button hide"
-      >▷</button
-    >
-  </div>
+    <source src={src} type="video/mp4" />
+  </video>
+  {
+    !autoplay && (
+      <div
+        id="video-player"
+        class="w-full z-20 h-full absolute top-0 flex justify-center items-center"
+      >
+        <button class="bg-gray-900/70 w-24 h-24 rounded-full text-gray-50 text-4xl play-button hide">
+          ▷
+        </button>
+      </div>
+    )
+  }
 </div>
 
 <script>

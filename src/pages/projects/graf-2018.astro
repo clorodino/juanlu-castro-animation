@@ -1,0 +1,74 @@
+---
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+import { GET, type dataItem, type image, type video } from "../api/data.json";
+import Video from "../../components/Video.astro";
+
+const response = await GET(Astro);
+const data = await response.json();
+const projectData = data.filter(
+  (item: dataItem) => item.url === "/projects/graf-2018"
+);
+const projectDataImages = projectData[0].images.projectImages;
+const projectDataVideos = projectData[0].videos;
+
+const { title, description, credits, images } = projectData[0];
+---
+
+<Layout>
+  <div
+    class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
+  >
+    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">{title}</h1>
+    <Paragraphs>
+      {description.map((paragraph: string) => <p>{paragraph}</p>)}
+    </Paragraphs>
+    <Video
+      isPostVideo={true}
+      src={projectDataVideos[0].src}
+      poster={projectDataVideos[0].poster}
+      title={projectDataVideos[0].title}
+      rounded
+    />
+
+    <Grid grid={4}>
+      {
+        projectDataVideos
+          .slice(1)
+          .map((video: video) => (
+            <Video
+              isPostVideo={true}
+              src={video.src}
+              poster={video.poster}
+              title={video.title}
+              autoplay
+              loop
+              rounded
+            />
+          ))
+      }
+    </Grid>
+
+    <Grid grid={1}>
+      {
+        projectDataImages
+          .slice(0, 1)
+          .map((image: image) => (
+            <PostImage scr={image.url} title={image.alt} />
+          ))
+      }
+    </Grid>
+
+    <div class="mt-12 mb-5 flex flex-col justify-center items-center">
+      <h2 class="text-2xl font-mono font-normal mb-5">Credits</h2>
+      <Paragraphs>
+        <p class="text-sm text-gray-400 font-light text-center">
+          Direction, design & animation:
+        </p>
+        <p class="text-center">{credits.direction}</p>
+      </Paragraphs>
+    </div>
+  </div>
+</Layout>
