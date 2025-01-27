@@ -40,7 +40,7 @@ import ToggleTheme from "./ToggleTheme.astro";
     </button>
     <div
       id="nav-container"
-      class="w-full overflow-hidden h-[calc(100vh-80px)] absolute top-20 left-0 hidden"
+      class="md:translate-y-0 md:h-8 md:relative md:block md:w-auto md:top-0 w-full overflow-hidden h-[calc(100vh-80px)] absolute top-20 left-0 hidden"
     >
       <div
         class="w-full transition-transform duration-300 ease-in-out md:block md:w-auto h-screen bg-white md:h-8 md:relative absolute top-0 z-10 md:translate-y-0 -translate-y-full left-0 dark:bg-gray-900"
@@ -60,7 +60,6 @@ import ToggleTheme from "./ToggleTheme.astro";
 
 <script defer>
   let isCollapsed = true;
-
   const handleCollapse = () => {
     console.log("clicked");
     if (isCollapsed) {
@@ -72,6 +71,7 @@ import ToggleTheme from "./ToggleTheme.astro";
         document
           .querySelector("#navbar-default")
           .classList.add("translate-y-0");
+        document.body.classList.add("overflow-y-hidden");
         isCollapsed = !isCollapsed;
       }, 50);
     } else if (!isCollapsed) {
@@ -85,6 +85,7 @@ import ToggleTheme from "./ToggleTheme.astro";
       setTimeout(() => {
         document.querySelector("#nav-container").classList.add("hidden");
       }, 300);
+      document.body.classList.remove("overflow-y-hidden");
     }
   };
   const button = document.querySelector("#burger-button");
