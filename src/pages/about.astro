@@ -4,17 +4,30 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24">
-      <img
-      class=" overflow-hidden rounded-xl object-center object-cover w-80 h-80"
-        src='src/assets/img/profile.png'
-        alt="Juanlu Castro"
-      />
-    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">Hello!</h1>
-    <Paragraphs>
-      <p>
-        I'm Juanlu Castro, director and character designer based in Barcelona. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde, doloremque numquam ducimus ullam quam magni corporis praesentium, minima aspernatur excepturi sequi exercitationem recusandae fugiat natus quis deleniti atque reprehenderit.
-      </p>
-    </Paragraphs>
+  <div class="flex flex-col md:flex-row max-w-screen-xl gap-8 mt-24">
+    <img
+      class="overflow-hidden rounded-xl object-center object-cover min-w-80 w-80 h-80"
+      src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415347/juanlu-castro-animation/img-port/profile_p4mkiy.png"
+      alt="Juanlu Castro"
+    />
+    <div class="flex flex-col w-full">
+      <h1 class="text-4xl font-medium pb-5 tracking-wide">Hello!</h1>
+      <Paragraphs>
+        <p>
+          I'm Juanlu Castro, a 2d animator, illustrator and motion designer
+          based in Barcelona.
+        </p><p>
+          With more than 10 years of experience in the animation, I've created
+          pieces for international clients like Ogilvy, Tous or Wallapop.
+        </p><p></p>My work is clearly influenced by frame-by-frame character
+        animation. I also love comics, and I'm part of the staff of Graf in BCN,
+        for which I made several pieces throw the years.
+        <p>
+          contact: <a class="underline" href="mailto:juanluiscas@gmail.com"
+            >juanluiscas@gmail.com</a
+          >
+        </p>
+      </Paragraphs>
+    </div>
   </div>
 </Layout>

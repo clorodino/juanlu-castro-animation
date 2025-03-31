@@ -1,19 +1,14 @@
 ---
 import Projects from "../components/Projects.astro";
-import Reel from "../components/Reel.astro";
-import Video from "../components/Video.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <Video
-    newClass="mt-24"
-    src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737645092/juanlu-castro-animation/jc-ident/jc-ident_bxzvwi.mp4"
-    poster="https://res.cloudinary.com/dtgwzogvc/image/upload/v1737649629/juanlu-castro-animation/jc-ident/jc-ident-poster_yileil_1_wodims.png"
-    title="Video Reel"
-    rounded
-  />
+  <iframe
+    class="mt-24 w-full aspect-video max-w-screen-lg relative rounded-xl"
+    src="https://player.vimeo.com/video/419854143?title=0&byline=1&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+    title="ShowReel"></iframe>
+
   <Projects />
 </Layout>
-
-{}

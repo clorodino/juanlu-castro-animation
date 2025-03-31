@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+---
+
+<Layout>
+  <div
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+  >
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Hoops
+    </h1>
+    <Paragraphs>
+      <p>
+        Hoops is a comic by Genie Espinosa, a dystopian, feminist and
+        post-millenial in which three close friends are trapped between two
+        parallel universes and must find a way to reunite.
+      </p>
+      <p>
+        I made a book trailer directed by Genie and inspired on the amazing
+        comic look.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full
+          aspect-video
+          rounded-xl
+          max-w-screen-lg
+          mt-10
+          outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
+        src="https://www.youtube.com/embed/RLf-z6WySDA?si=6Ua5mMrU_n6LcX6s"
+        title="hoops trailer"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      >
+      </iframe>
+
+      <!-- Final Look  -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Final Look</div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl w-full max-w-screen-sm justify-self-center"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743410818/juanlu-castro-animation/hoops/girls_swgoi4.mp4"
+        ></video>
+      </Grid>
+
+      <!-- Clean Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Clean and Color Animation
+      </div>
+      <Grid grid={2}>
+        <video
+          class="rounded-xl w-full max-w-screen-sm"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743410818/juanlu-castro-animation/hoops/ghost-line_cbewld.mp4"
+        ></video>
+        <video
+          class="rounded-xl w-full max-w-screen-sm"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743410817/juanlu-castro-animation/hoops/ghost-color_s7n3kj.mp4"
+        ></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">
+            Direction & Illustration:
+          </p>
+          <p>Genie Espinosa</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Animation:</p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+      </div>
+    </Paragraphs>
+  </div>
+</Layout>

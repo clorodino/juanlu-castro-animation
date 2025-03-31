@@ -1,0 +1,139 @@
+---
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+---
+
+<Layout>
+  <div
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+  >
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      DHO
+    </h1>
+    <Paragraphs>
+      <p>
+        A boy spends his time looking for food in a square world until he
+        discovers a mysterious thing.
+      </p>
+      <p>
+        DHO is an animated short film based on a comic book by Lorenzo
+        Montatore.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full
+      aspect-video
+      rounded-xl
+      max-w-screen-lg
+      mt-10"
+        src="https://player.vimeo.com/video/390421885?badge=0&autopause=0&player_id=0&app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Weird Walk"
+      >
+      </iframe>
+
+      <!-- Design -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+      <Grid grid={1}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/DHO_Modelsheet_01_gcmzew.png"
+          title="character design"
+        />
+      </Grid>
+      <Grid grid={2}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/poses_dho_1_neddmj.png"
+          title="character design"
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400755/juanlu-castro-animation/dho/poses_dho_2_zxhrt5.png"
+          title="character design"
+        />
+      </Grid>
+      <Grid grid={1}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/fondo_final_AE_bacgfs.png"
+          title="background design"
+        />
+      </Grid>
+      <Grid grid={2}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/espacio_exterior_AE_tril2y.png"
+          title="background design"
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/arbustos_lekuka.png"
+          title="background design"
+        />
+      </Grid>
+
+      <!-- Rough Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Rough Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400912/juanlu-castro-animation/dho/videos/Shot_022_j2d6g6.mp4"
+        ></video>
+      </Grid>
+      <Grid grid={2}>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400913/juanlu-castro-animation/dho/videos/Shot_042_h2q8r7.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400913/juanlu-castro-animation/dho/videos/Shot_046_mxqhvc.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400913/juanlu-castro-animation/dho/videos/Shot_010_ilic7w.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400912/juanlu-castro-animation/dho/videos/Shot_015_qv2kmt.mp4"
+        ></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Direction:</p>
+          <p>Juanlu Castro & Lorenzo Montatore</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Animation:</p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Story & Design:</p>
+          <p>Lorenzo Montatore</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Sound & Music:</p>
+          <p>Javier Colilla Rayon</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Sound Mastering:</p>
+          <p>Raúl Burrueco</p>
+        </Paragraphs>
+      </div>
+    </Paragraphs>
+  </div>
+</Layout>

@@ -1,0 +1,79 @@
+---
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+---
+
+<Layout>
+  <div
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+  >
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Graf 2020
+    </h1>
+    <Paragraphs>
+      <p>
+        Animated poster version for GRAF 2020 Barcelona by Marta Cartu.
+        Unfortunately, it was never shown at the festival due to COVID-19.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full
+      aspect-video
+      rounded-xl
+      max-w-screen-lg
+      mt-10"
+        src="https://player.vimeo.com/video/419920448?badge=0&autopause=0&player_id=0&app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Weird Walk"
+      >
+      </iframe>
+
+      <!-- Design -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+      <Grid grid={1}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743178497/juanlu-castro-animation/graf-2020/graf-2020-poster_xqoaxz.png"
+          title=""
+          style="flex justify-center items-center"
+          className="max-w-screen-sm"
+        />
+      </Grid>
+
+      <!-- Clean Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Clean Animation
+      </div>
+      <Grid grid={1}>
+        <div class="flex justify-center items-center">
+          <video
+            class="rounded-xl w-full max-w-screen-sm"
+            autoplay
+            loop
+            src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743181342/juanlu-castro-animation/graf-2020/graf-2020-animated-poster_oazt6b.mp4"
+          ></video>
+        </div>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Illustration:</p>
+          <p>Marta Cartu</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Music & sound design:</p>
+          <p>Raúl Burrueco</p>
+        </Paragraphs>
+      </div>
+    </Paragraphs>
+  </div>
+</Layout>

@@ -1,0 +1,74 @@
+---
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+---
+
+<Layout>
+  <div
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+  >
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Loops
+    </h1>
+    <Paragraphs>
+      <p>This is a compilation of loops I made just for fun.</p>
+
+      <!-- Video -->
+      <Grid grid={3}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176981/juanlu-castro-animation/loops/Instagram-Ch_01_zwnxbz.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176984/juanlu-castro-animation/loops/Instagram-Ch_02_wy6n8b.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176985/juanlu-castro-animation/loops/Instagram-Ch_03_tvli0u.gif"
+          title=""
+        />
+      </Grid>
+
+      <Grid grid={3}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176988/juanlu-castro-animation/loops/Santa_Claus_IG_hmt1xi.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743177280/juanlu-castro-animation/loops/01-Character-walking_jibqac.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176979/juanlu-castro-animation/loops/DOG_web__pqrw4f.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176986/juanlu-castro-animation/loops/Animation_Day_2_s7qyj6.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176980/juanlu-castro-animation/loops/02-Anim_05_oh0eok.gif"
+          title=""
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176983/juanlu-castro-animation/loops/Centramina_rgh4p6.gif"
+          title=""
+        />
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">
+            Illustration & Animation:
+          </p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+      </div>
+    </Paragraphs>
+  </div>
+</Layout>

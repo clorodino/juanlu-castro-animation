@@ -1,6 +1,15 @@
+---
+interface Props {
+  className?: string;
+}
+const { className } = Astro.props;
+---
+
 <div
-  <div
-  class="pb-5 flex flex-col gap-2 text-xl font-mono font-extralight max-w-screen-md"
+  class:list={[
+    "pb-5 flex flex-col gap-2 text-xl font-mono font-extralight max-w-screen-lg w-full",
+    className,
+  ]}
 >
   <slot />
 </div>

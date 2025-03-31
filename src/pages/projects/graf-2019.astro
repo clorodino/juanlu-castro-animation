@@ -1,0 +1,126 @@
+---
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+---
+
+<Layout>
+  <div
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+  >
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Graf 2019
+    </h1>
+    <Paragraphs>
+      <p>
+        In GRAF 2019 Barcelona edition, we made an animated version of the
+        poster campaign designed by Lorenzo Montatore which was shown on screens
+        inside the event, and also in social media profiles.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full
+      aspect-video
+      rounded-xl
+      max-w-screen-lg
+      mt-10"
+        src="https://player.vimeo.com/video/323657627?badge=0&autopause=0&player_id=0&app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Weird Walk"
+      >
+      </iframe>
+
+      <!-- Design -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+      <Grid grid={1}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176401/juanlu-castro-animation/graf-2019/videos/cartel-graf-2019_jpf57t.png"
+          title=""
+          style="flex justify-center items-center"
+          className="max-w-screen-sm"
+        />
+      </Grid>
+
+      <!-- Clean Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Clean Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743175997/juanlu-castro-animation/graf-2019/videos/logo_ooinna.mp4"
+        ></video>
+      </Grid>
+      <Grid grid={3}>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743174562/juanlu-castro-animation/graf-2019/videos/Personaje_01_Behance_msio9j.mp4"
+        ></video>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743175998/juanlu-castro-animation/graf-2019/videos/character-02_jrxoyt.mp4"
+        ></video>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743175999/juanlu-castro-animation/graf-2019/videos/character-03_tw8tt5.mp4"
+        ></video>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743176000/juanlu-castro-animation/graf-2019/videos/character-04_tmhfio.mp4"
+        ></video>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743176001/juanlu-castro-animation/graf-2019/videos/character-05_bndcyz.mp4"
+        ></video>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743176002/juanlu-castro-animation/graf-2019/videos/character-06_bkifjq.mp4"
+        ></video>
+      </Grid>
+      <Grid grid={2}>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743176004/juanlu-castro-animation/graf-2019/videos/character-07_lvio4a.mp4"
+        ></video>
+        <video
+          class="rounded-full"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743176003/juanlu-castro-animation/graf-2019/videos/character-08_kora37.mp4"
+        ></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Illustration:</p>
+          <p>Lorenzo Montatore</p>
+        </Paragraphs>
+      </div>
+    </Paragraphs>
+  </div>
+</Layout>

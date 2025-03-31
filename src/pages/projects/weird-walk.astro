@@ -3,50 +3,100 @@ import PostImage from "../../components/PostImage.astro";
 import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
-import { GET, type dataItem } from "../api/data.json";
-
-const response = await GET(Astro);
-const data = await response.json();
-const projectData = data.filter(
-  (item: dataItem) => item.url === "/projects/weird-walk"
-);
-const { title, description, credits } = projectData[0];
 ---
 
 <Layout>
   <div
-    class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
   >
-    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">{title}</h1>
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Weird Walk
+    </h1>
     <Paragraphs>
-      {description.map((paragraph: string) => <p>{paragraph}</p>)}
+      <p>
+        Weird Walk is a piece made from several loops posted on Instagram. The
+        main intention was to make an "exquisite corpse", posting a clip based
+        on the previous every two days.
+      </p>
+      <p>
+        Finally, I made the entire composition with all the clips, creating a
+        big loop.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full aspect-video rounded-xl max-w-screen-lg mt-10"
+        src="https://player.vimeo.com/video/504275015?badge=0&autopause=0&player_id=0&app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Weird Walk"
+      >
+      </iframe>
+
+      <!-- Clean Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Clean Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164329/juanlu-castro-animation/weird-walk/clean/01_oh7j4l.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164331/juanlu-castro-animation/weird-walk/clean/02_fc4kot.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164330/juanlu-castro-animation/weird-walk/clean/03_xhpnsi.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164332/juanlu-castro-animation/weird-walk/clean/04_ytemqj.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Color Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Color Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164329/juanlu-castro-animation/weird-walk/color/01_vgyzqa.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164330/juanlu-castro-animation/weird-walk/color/02_wgiqdl.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164328/juanlu-castro-animation/weird-walk/color/03_dv0geu.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743164328/juanlu-castro-animation/weird-walk/color/04_hc0j0s.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">
+            Direction, design, animation & sound:
+          </p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+      </div>
     </Paragraphs>
-    <iframe
-      class="w-full aspect-video rounded-xl max-w-screen-lg"
-      src="https://player.vimeo.com/video/504275015?badge=0&autopause=0&player_id=0&app_id=58479"
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-      title="Weird Walk"
-    >
-    </iframe>
-    <Grid grid={3}>
-      <PostImage scr="/src//assets/img/Reel_Port-1.gif" title="random dog" />
-      <PostImage
-        scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg"
-        title="random dog"
-      />
-      <PostImage
-        scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg"
-        title="random dog"
-      />
-    </Grid>
-    <div class="mt-12 mb-5 flex flex-col justify-center items-center">
-      <h2 class="text-2xl font-mono font-normal mb-5">Credits</h2>
-      <Paragraphs>
-        <p class="text-sm text-gray-400 font-light text-center">
-          Direction, design, animation & sound:
-        </p>
-        <p class="text-center">{credits.direction}</p>
-      </Paragraphs>
-    </div>
   </div>
 </Layout>

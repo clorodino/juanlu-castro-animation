@@ -1,74 +1,86 @@
 ---
-import PostImage from "../../components/PostImage.astro";
 import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
-import { GET, type dataItem, type image, type video } from "../api/data.json";
-import Video from "../../components/Video.astro";
-
-const response = await GET(Astro);
-const data = await response.json();
-const projectData = data.filter(
-  (item: dataItem) => item.url === "/projects/graf-2018"
-);
-const projectDataImages = projectData[0].images.projectImages;
-const projectDataVideos = projectData[0].videos;
-
-const { title, description, credits, images } = projectData[0];
 ---
 
 <Layout>
   <div
-    class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
   >
-    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">{title}</h1>
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Graf 2018
+    </h1>
     <Paragraphs>
-      {description.map((paragraph: string) => <p>{paragraph}</p>)}
+      <p>
+        GRAF is a small press and independent edition festival, where small and
+        medium editors, self-edition collectives, graphic artists and fanzines
+        have a place. It takes place since 2013, alternately in Madrid and
+        Barcelona.
+      </p>
+      <p>
+        I made these four animations promoting the application period for
+        editors, artists, collectives or cartoonist who are interested in join
+        to next edition.
+      </p>
+
+      <!-- Video -->
+      <video
+        class="w-full aspect-video rounded-xl max-w-screen-lg mt-10"
+        loop
+        src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721262/juanlu-castro-animation/graf-2018/graf-2018_e6fuza.mp4"
+        autoplay></video>
+
+      <!-- Rough Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Rough Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="w-full rounded-xl max-w-screen-lg"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743087021/juanlu-castro-animation/graf-2018/graf-2018-rough_wm5py9.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Clean Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Clean Animation
+      </div>
+      <Grid grid={2}>
+        <video
+          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721260/juanlu-castro-animation/graf-2018/G_ndpgdq.mp4"
+          autoplay></video>
+        <video
+          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721260/juanlu-castro-animation/graf-2018/R_tnh87i.mp4"
+          autoplay></video>
+        <video
+          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721260/juanlu-castro-animation/graf-2018/A_bxnl1r.mp4"
+          autoplay></video>
+        <video
+          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721265/juanlu-castro-animation/graf-2018/F_vh9rkd.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">
+            Direction, design & animation:
+          </p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+      </div>
     </Paragraphs>
-    <Video
-      isPostVideo={true}
-      src={projectDataVideos[0].src}
-      poster={projectDataVideos[0].poster}
-      title={projectDataVideos[0].title}
-      rounded
-    />
-
-    <Grid grid={4}>
-      {
-        projectDataVideos
-          .slice(1)
-          .map((video: video) => (
-            <Video
-              isPostVideo={true}
-              src={video.src}
-              poster={video.poster}
-              title={video.title}
-              autoplay
-              loop
-              rounded
-            />
-          ))
-      }
-    </Grid>
-
-    <Grid grid={1}>
-      {
-        projectDataImages
-          .slice(0, 1)
-          .map((image: image) => (
-            <PostImage scr={image.url} title={image.alt} />
-          ))
-      }
-    </Grid>
-
-    <div class="mt-12 mb-5 flex flex-col justify-center items-center">
-      <h2 class="text-2xl font-mono font-normal mb-5">Credits</h2>
-      <Paragraphs>
-        <p class="text-sm text-gray-400 font-light text-center">
-          Direction, design & animation:
-        </p>
-        <p class="text-center">{credits.direction}</p>
-      </Paragraphs>
-    </div>
   </div>
 </Layout>

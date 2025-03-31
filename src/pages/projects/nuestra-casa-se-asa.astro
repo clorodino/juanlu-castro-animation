@@ -7,45 +7,118 @@ import Paragraphs from "../../components/Paragraphs.astro";
 
 <Layout>
   <div
-    class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
   >
-    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
       Nuestra casa se asa
     </h1>
     <Paragraphs>
+      <p>Short film made for the 53h Alcine film fest in Madrid.</p>
       <p>
-        Short film made for the 53h Alcine film fest in Madrid.
-        <p>
-          This piece is part of a live music show by Lorenzo Montatore, based on
-          "Si bailáis entenderéis mejor las letras", a comic book about Talking
-          heads.
-        </p>
+        This piece is part of a live music show by Lorenzo Montatore, based on
+        "Si bailáis entenderéis mejor las letras", a comic book about Talking
+        heads.
       </p>
+
+      <!-- Video -->
       <iframe
-        class="w-full aspect-video rounded-xl max-w-screen-lg mt-4"
-        src="https://player.vimeo.com/video/504275015?badge=0&autopause=0&player_id=0&app_id=58479"
+        class="w-full aspect-video rounded-xl max-w-screen-lg mt-10"
+        src="https://player.vimeo.com/video/1041769174?badge=0&autopause=0&player_id=0&app_id=58479"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        title="Weird Walk"
+        title="Nuestra Casa Se Asa"
       >
       </iframe>
-      <Grid grid={3}>
-        <PostImage scr="/src//assets/img/Reel_Port-1.gif" title="random dog" />
+
+      <!-- Design -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+
+      <Grid grid={2}>
         <PostImage
-          scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg"
-          title="random dog"
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743088550/juanlu-castro-animation/nuestra-casa-se-asa/nuestra-casa-props-01_w0rsk9.png"
+          title="props"
         />
         <PostImage
-          scr="https://random.dog/c22c077e-a009-486f-834c-a19edcc36a17.jpg"
-          title="random dog"
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743088551/juanlu-castro-animation/nuestra-casa-se-asa/nuestra-casa-props-02_rpf7lo.png"
+          title="props"
         />
       </Grid>
-      <div class="mt-12 mb-5 flex flex-col justify-center items-center">
-        <h2 class="text-2xl font-mono font-normal mb-5">Credits</h2>
+      <Grid grid={3}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743088551/juanlu-castro-animation/nuestra-casa-se-asa/talking-heads-fireworkers_jhhgrf.png"
+          title="talking heads fire fighters"
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743088553/juanlu-castro-animation/nuestra-casa-se-asa/talking-heads_h8gh0r.png"
+          title="talking heads faces"
+        />
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743088552/juanlu-castro-animation/nuestra-casa-se-asa/talking-heads-screaming_vfjtp0.png"
+          title="talking heads screaming"
+        />
+      </Grid>
+
+      <!-- Rough Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Rough Animation
+      </div>
+
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743088744/juanlu-castro-animation/nuestra-casa-se-asa/firefighters-rough_lamfzr.mp4"
+          autoplay></video>
+      </Grid>
+      <Grid grid={2}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743088575/juanlu-castro-animation/nuestra-casa-se-asa/byrne-walk-rough_tgvzyn.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743088574/juanlu-castro-animation/nuestra-casa-se-asa/byrne-stairs-rough_aji9u7.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Clean animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Clean Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743088573/juanlu-castro-animation/nuestra-casa-se-asa/firefighters-clean_jfinth.mp4"
+          autoplay></video>
+      </Grid>
+      <Grid grid={2}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743088572/juanlu-castro-animation/nuestra-casa-se-asa/byrne-walk-clean_oncayr.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743088572/juanlu-castro-animation/nuestra-casa-se-asa/byrne-stairs-clean_okkvj6.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light text-center">
-            Direction, design, animation & sound:
+          <p class="text-sm text-gray-400 font-light">
+            Direction, animation & sound:
           </p>
-          <p class="text-center">Juan Luis Castro</p>
+          <p>Juan Luis Castro</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Story & design:</p>
+          <p>Lorenzo Montatore</p>
         </Paragraphs>
       </div>
     </Paragraphs>

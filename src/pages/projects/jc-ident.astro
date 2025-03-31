@@ -3,75 +3,174 @@ import PostImage from "../../components/PostImage.astro";
 import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
-import { GET, type dataItem, type image } from "../api/data.json";
-import Video from "../../components/Video.astro";
-
-const response = await GET(Astro);
-const data = await response.json();
-const projectData = data.filter(
-  (item: dataItem) => item.url === "/projects/jc-ident"
-);
-const projectDataImages = projectData[0].images.projectImages;
-const projectDataVideos = projectData[0].videos;
-
-const { title, description, credits, images } = projectData[0];
 ---
 
 <Layout>
   <div
-    class="flex flex-col justify-center items-center max-w-screen-xl gap-4 mt-24"
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
   >
-    <h1 class="text-4xl font-medium pt-10 pb-5 tracking-wide">{title}</h1>
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      JC Ident
+    </h1>
     <Paragraphs>
-      {description.map((paragraph: string) => <p>{paragraph}</p>)}
+      <p>
+        This video is an introduction for my showreel. I have included part of
+        the process from storyboard to final clip.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full
+      aspect-video
+      rounded-xl
+      max-w-screen-lg
+      mt-10"
+        src="https://player.vimeo.com/video/419854143?badge=0&autopause=0&player_id=0&app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Weird Walk"
+      >
+      </iframe>
+
+      <!-- Storyboard -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Storyboard</div>
+      <Grid grid={3}>
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154276/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00001_aylmrt.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154276/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00003_whgzcd.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154276/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00004_ogv2ht.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154276/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00005_mf4tke.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154276/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00006_qx2mwg.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154276/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00007_dcfl5v.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154277/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00008_gde0so.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154277/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00009_nn4qr2.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154277/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00010_sysloa.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154277/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00011_e79hwz.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154278/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00012_wwpqqo.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154278/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00013_aweeur.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154278/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00014_sm8tgk.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154279/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00015_rskios.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154279/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00016_etzlgv.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154279/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00017_vxqzuv.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154280/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00018_c7ycos.png"
+          title="storyboard shot"
+        />
+        <PostImage
+          border
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743154281/juanlu-castro-animation/jc-ident/storyboard/JLC-Ident-board-00019_cps9dk.png"
+          title="storyboard shot"
+        />
+      </Grid>
+
+      <!-- Process -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Process</div>
+      <Grid grid={2}>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743155307/juanlu-castro-animation/jc-ident/01_Rough_t7ksm2.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743155306/juanlu-castro-animation/jc-ident/02_Clean_up_bid8ul.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743155306/juanlu-castro-animation/jc-ident/03_Colour_qv2vue.mp4"
+          autoplay></video>
+        <video
+          class="rounded-xl"
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743155307/juanlu-castro-animation/jc-ident/04_Final_fuya4n.mp4"
+          autoplay></video>
+      </Grid>
+
+      <!-- Palette -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">Palette</div>
+      <Grid grid={1}>
+        <PostImage
+          src="https://res.cloudinary.com/dtgwzogvc/image/upload/c_fill,w_1024/v1737646206/juanlu-castro-animation/jc-ident/palette_khfo7n.png"
+          title=""
+        />
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">
+            Direction, design & animation:
+          </p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+      </div>
     </Paragraphs>
-    <Video
-      isPostVideo={true}
-      src={projectDataVideos[0].src}
-      poster={projectDataVideos[0].poster}
-      title={projectDataVideos[0].title}
-      6
-      rounded
-    />
-
-    <Grid grid={2}>
-      {
-        projectDataImages
-          .slice(0, 2)
-          .map((image: image) => (
-            <PostImage scr={image.url} title={image.alt} />
-          ))
-      }
-    </Grid>
-    <Video
-      isPostVideo={true}
-      src={projectDataVideos[1].src}
-      poster={projectDataVideos[1].poster}
-      title={projectDataVideos[1].title}
-      autoplay
-      loop
-      rounded
-    />
-    <Grid grid={1}>
-      {
-        projectDataImages
-          .slice(2)
-          .map((image: image) => (
-            <PostImage scr={image.url} title={image.alt} />
-          ))
-      }
-    </Grid>
-
-    <div class="mt-12 mb-5 flex flex-col justify-center items-center">
-      <h2 class="text-2xl font-mono font-normal mb-5">Credits</h2>
-      <Paragraphs>
-        <p class="text-sm text-gray-400 font-light text-center">
-          Direction, design & animation:
-        </p>
-        <p class="text-center">{credits.direction}</p>
-        <p class="text-sm text-gray-400 font-light text-center">Sound:</p>
-        <p class="text-center">{credits.sound}</p>
-      </Paragraphs>
-    </div>
   </div>
 </Layout>
