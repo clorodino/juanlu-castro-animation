@@ -7,4 +7,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://clorodino.github.io",
   base: 'juanlu-castro-animation',
+  trailingSlash: "never"
 });

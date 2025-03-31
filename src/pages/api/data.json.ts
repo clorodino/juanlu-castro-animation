@@ -1,5 +1,7 @@
 import type { APIRoute } from "astro";
 
+export const baseUrl = import.meta.env.BASE_URL;
+
 export interface image {
   url: string;
   alt: string;
@@ -32,7 +34,7 @@ const data: dataItem[] = [
   {
     id: 3,
     title: "JC Ident",
-    url: "/projects/jc-ident",
+    url: `${baseUrl}/projects/jc-ident`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415346/juanlu-castro-animation/img-port/reel_port-1_m8j22m.gif",
       projectImages: [
@@ -57,7 +59,7 @@ const data: dataItem[] = [
   {
     id: 9,
     title: "Graf 2018",
-    url: "/projects/graf-2018",
+    url: `${baseUrl}/projects/graf-2018`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415337/juanlu-castro-animation/img-port/graf-2018-port_gnv8xy.gif",
       projectImages: [],
@@ -76,7 +78,7 @@ const data: dataItem[] = [
   {
     id: 6,
     title: "Graf 2019",
-    url: "/projects/graf-2019",
+    url: `${baseUrl}/projects/graf-2019`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415337/juanlu-castro-animation/img-port/graf-2019-port_yhtqki.gif",
       projectImages: [],
@@ -93,7 +95,7 @@ const data: dataItem[] = [
   {
     id: 7,
     title: "Graf 2020",
-    url: "/projects/graf-2020",
+    url: `${baseUrl}/projects/graf-2020`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415341/juanlu-castro-animation/img-port/graf-2020-port_da4awg.gif",
       projectImages: [],
@@ -112,7 +114,7 @@ const data: dataItem[] = [
   {
     id: 2,
     title: "DHO",
-    url: "/projects/DHO",
+    url: `${baseUrl}/projects/DHO`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415336/juanlu-castro-animation/img-port/DHO-port_qppreu.gif",
       projectImages: [],
@@ -134,7 +136,7 @@ const data: dataItem[] = [
   {
     id: 10,
     title: "Loops",
-    url: "/projects/loops",
+    url: `${baseUrl}/projects/loops`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415339/juanlu-castro-animation/img-port/loops-port_y170tm.gif",
       projectImages: [],
@@ -148,7 +150,7 @@ const data: dataItem[] = [
   {
     id: 4,
     title: "Hoops",
-    url: "/projects/hoops",
+    url: `${baseUrl}/projects/hoops`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415338/juanlu-castro-animation/img-port/hoops-port_evnayf.gif",
       projectImages: [],
@@ -163,7 +165,7 @@ const data: dataItem[] = [
   {
     id: 8,
     title: "Weird Walk",
-    url: "/projects/weird-walk",
+    url: `${baseUrl}/projects/weird-walk`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415344/juanlu-castro-animation/img-port/weird-walk-port_ukxc1r.gif",
       projectImages: [],
@@ -182,7 +184,7 @@ const data: dataItem[] = [
   {
     id: 5,
     title: "Wallapop",
-    url: "/projects/wallapop",
+    url: `${baseUrl}/projects/wallapop`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415343/juanlu-castro-animation/img-port/wallapop-port_cdg7ln.gif",
       projectImages: [],
@@ -198,7 +200,7 @@ const data: dataItem[] = [
   {
     id: 1,
     title: "Nuestra casa se asa",
-    url: "/projects/nuestra-casa-se-asa",
+    url: `${baseUrl}/projects/nuestra-casa-se-asa`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415340/juanlu-castro-animation/img-port/nuestra-casa-se-asa-port_zwl2ih.gif",
       projectImages: [],
