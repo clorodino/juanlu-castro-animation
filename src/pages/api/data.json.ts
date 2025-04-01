@@ -36,7 +36,7 @@ const data: dataItem[] = [
     title: "JC Ident",
     url: `${baseUrl}/projects/jc-ident`,
     images: {
-      port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415346/juanlu-castro-animation/img-port/reel_port-1_m8j22m.gif",
+      port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1743415343/juanlu-castro-animation/img-port/tv-jc-ident-port_we3vgv.gif",
       projectImages: [
         { url: "/src/assets/img/reel-poster.png", alt: "" },
         { url: "/src/assets/img/tv-jc-ident-port.gif", alt: "" },
