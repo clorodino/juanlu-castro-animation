@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: "https://animation.juanlucastro.com",
+  site: "https://juanlucastro.com",
   base: 'juanlu-castro-animation',
   trailingSlash: "never"
 });
