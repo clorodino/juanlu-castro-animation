@@ -6,5 +6,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: "https://animation.juanlucastro.com",
+  base: "animation.juanlucastro.com",
   trailingSlash: "never"
 });
