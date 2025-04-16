@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
-export const baseUrl = `animation.juanlucastro.com`;
+export const baseUrl = import.meta.env.BASE_URL;
 
 export interface image {
   url: string;
