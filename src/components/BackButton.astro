@@ -1,0 +1,42 @@
+---
+---
+
+<a class="back-button opacity-0 flex fixed left-3 top-6 font-mono text-lg tracking-wider z-50 transition duration-300 bg-white ease-out px-3 py-2 rounded-xls hover:underline" href=`/`>
+  <svg class="rotate-180 w-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></g>
+  </svg>
+  Back 
+</a>
+
+<button class="back-to-top opacity-0 flex fixed right-3 bottom-14 font-mono text-lg tracking-wider z-50 transition duration-300 bg-white ease-out px-3 py-2 rounded-xls hover:underline" >
+
+  <svg class="-rotate-90 w-6" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></g>
+  </svg>
+
+</button>
+
+<script>
+  const backButton = document.querySelector('.back-button');
+  const backToTopButton = document.querySelector('.back-to-top ');
+  window.onscroll = function() {scrollFunction()};
+
+  const scrollFunction = () => {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 150) {
+      backButton?.classList.add('opacity-100')
+      backButton?.classList.remove('opacity-0')
+      backToTopButton?.classList.add('opacity-100')
+      backToTopButton?.classList.remove('opacity-0')
+    } else {
+      backButton?.classList.add('opacity-0')
+      backButton?.classList.remove('opacity-100')
+      backToTopButton?.classList.add('opacity-0')
+      backToTopButton?.classList.remove('opacity-100')
+    }
+  };
+
+  backToTopButton?.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
