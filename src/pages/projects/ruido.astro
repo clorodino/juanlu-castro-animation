@@ -1,0 +1,109 @@
+---
+import PostImage from "../../components/PostImage.astro";
+import Layout from "../../layouts/Layout.astro";
+import Grid from "../../components/Grid.astro";
+import Paragraphs from "../../components/Paragraphs.astro";
+import BackButton from "../../components/BackButton.astro";
+---
+
+<Layout>
+  <BackButton   />
+  <div
+    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+  >
+    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      Ruido
+    </h1>
+    <Paragraphs>
+      <p>
+        Back in 2020, Antonio Hitos and I started working on an animated video based on some of his characters. At the time, I didn't know it, but what we were actually doing was an animated trailer for one of his best works, "Ruido" (Noise). It wasn't a trailer we initially envisioned as such, and life has led us to revisit and abandon it for various reasons time and time again.
+      </p>
+      <p>
+        Finally, almost two years after the publication of "Ruido," and six years after we started working on it, it's finally finished.
+      </p>
+
+      <!-- Video -->
+      <iframe
+        class="w-full
+      aspect-video
+      rounded-xl
+      max-w-screen-lg
+      mt-10"
+        src="https://player.vimeo.com/video/1160822443?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        title="Ruido"
+      >
+      </iframe>
+
+      <!-- Rough Animation -->
+      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+        Rough Animation
+      </div>
+      <Grid grid={1}>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980690/juanlu-castro-animation/ruido/Clip_9_b_f3tndy.mp4"
+        ></video>
+      </Grid>
+      <Grid grid={2}>
+                <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980470/juanlu-castro-animation/ruido/clip_4_cxm3zp.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769981040/juanlu-castro-animation/ruido/clip_5_hyengp.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980468/juanlu-castro-animation/ruido/clip_2_raaunz.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980473/juanlu-castro-animation/ruido/clip_3_psikek.mp4"
+        ></video>
+        <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980469/juanlu-castro-animation/ruido/clip_6_dvnr3c.mp4"
+        ></video>
+                <video
+          class="rounded-xl"
+          autoplay
+          loop
+          src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980470/juanlu-castro-animation/ruido/clip_7_jdu46a.mp4"
+        ></video>
+      </Grid>
+
+      <!-- Credits -->
+      <div
+        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+      >
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+          <p>Juanlu Castro & Antonio Hitos</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Design:</p>
+          <p>Antonio Hitos</p>
+        </Paragraphs>
+        <Paragraphs>
+          <p class="text-sm text-gray-400 font-light">Clean up, edit, compositing, sound fx and music:</p>
+          <p>Juanlu Castro</p>
+        </Paragraphs>
+
+      </div>
+    </Paragraphs>
+  </div>
+</Layout>

@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
-export const baseUrl = ""
+export const baseUrl = "";
 
 export interface image {
   url: string;
@@ -198,7 +198,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 1,
+    id: 4,
     title: "Nuestra casa se asa",
     url: `${baseUrl}/projects/nuestra-casa-se-asa`,
     images: {
@@ -214,6 +214,25 @@ const data: dataItem[] = [
       cleanUp: "Juanlu Castro",
       music: "Juanlu Castro",
       sound: "Juanlu Castro",
+    },
+  },
+  {
+    id: 1,
+    title: "Ruido",
+    url: `${baseUrl}/projects/ruido`,
+    images: {
+      port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1769970694/juanlu-castro-animation/ruido/ruido-port_un4vef.gif",
+      projectImages: [],
+    },
+    description: [``],
+    credits: {
+      direction: "",
+      design: "",
+      story: "",
+      animation: "",
+      cleanUp: "",
+      music: "",
+      sound: "",
     },
   },
 ];
