@@ -32,7 +32,7 @@ export interface dataItem {
 
 const data: dataItem[] = [
   {
-    id: 3,
+    id: 4,
     title: "JC Ident",
     url: `${baseUrl}/projects/jc-ident`,
     images: {
@@ -57,7 +57,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 9,
+    id: 10,
     title: "Graf 2018",
     url: `${baseUrl}/projects/graf-2018`,
     images: {
@@ -76,7 +76,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: "Graf 2019",
     url: `${baseUrl}/projects/graf-2019`,
     images: {
@@ -93,7 +93,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 7,
+    id: 8,
     title: "Graf 2020",
     url: `${baseUrl}/projects/graf-2020`,
     images: {
@@ -112,7 +112,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "DHO",
     url: `${baseUrl}/projects/DHO`,
     images: {
@@ -134,7 +134,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 10,
+    id: 11,
     title: "Loops",
     url: `${baseUrl}/projects/loops`,
     images: {
@@ -148,7 +148,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Hoops",
     url: `${baseUrl}/projects/hoops`,
     images: {
@@ -163,7 +163,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 8,
+    id: 9,
     title: "Weird Walk",
     url: `${baseUrl}/projects/weird-walk`,
     images: {
@@ -182,7 +182,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "Wallapop",
     url: `${baseUrl}/projects/wallapop`,
     images: {
@@ -198,7 +198,7 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 4,
+    id: 2,
     title: "Nuestra casa se asa",
     url: `${baseUrl}/projects/nuestra-casa-se-asa`,
     images: {
@@ -217,11 +217,30 @@ const data: dataItem[] = [
     },
   },
   {
-    id: 1,
+    id: 5,
     title: "Ruido",
     url: `${baseUrl}/projects/ruido`,
     images: {
       port: "https://res.cloudinary.com/dtgwzogvc/image/upload/v1769970694/juanlu-castro-animation/ruido/ruido-port_un4vef.gif",
+      projectImages: [],
+    },
+    description: [``],
+    credits: {
+      direction: "",
+      design: "",
+      story: "",
+      animation: "",
+      cleanUp: "",
+      music: "",
+      sound: "",
+    },
+  },
+  {
+    id: 1,
+    title: "Graf 2026",
+    url: `${baseUrl}/projects/graf-2026`,
+    images: {
+      port: "https://res.cloudinary.com/dtgwzogvc/image/upload/q_auto/f_auto/v1775056717/juanlu-castro-animation/graf-2026/graf-2026-port_idhngh.gif",
       projectImages: [],
     },
     description: [``],
