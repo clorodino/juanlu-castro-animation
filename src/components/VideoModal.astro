@@ -1,0 +1,93 @@
+---
+// VideoModal.astro
+interface Props {
+  buttonText?: string;
+  videoUrl: string; // URL de YouTube, Vimeo o un archivo local (.mp4)
+  class?: string;
+}
+
+const { buttonText = "Ver video", videoUrl, class: className } = Astro.props;
+---
+
+<!-- Botón para abrir el modal -->
+<button 
+  id="openModalBtn" 
+  class={className}
+  >
+  {buttonText}
+  <svg width="26px" height="26px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M8,19l0,-14l11,7l-11,7Z" style="fill:#f4f4f5;fill-rule:nonzero;"/>
+  </svg>
+</button>
+
+<!-- Elemento nativo dialog de HTML estilizado con Tailwind -->
+<dialog id="videoModal" class="p-0 backdrop:bg-zinc-900/90 max-w-6xl w-full bg-black">
+  <div class="relative flex flex-col bg-zinc-900 text-white overflow-hidden">
+    
+    <!-- Botón de cierre -->
+    <button 
+      id="closeModalBtn" 
+      class="absolute top-1 right-1 z-10 p-2 text-neutral-50 hover:text-cyan-500  transition-colors"
+      aria-label="Cerrar"
+    >
+      <svg xmlns="http://w3.org" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path  stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Contenedor del video (Responsive 16:9) -->
+    <div class="relative w-full aspect-video">
+      <iframe 
+        id="videoFrame"
+        class="w-full h-full"
+        src="" 
+        data-src={videoUrl}
+        title="Video modal" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+      ></iframe>
+    </div>
+
+  </div>
+</dialog>
+
+<script>
+  const modal = document.getElementById('videoModal') as HTMLDialogElement;
+  const openBtn = document.getElementById('openModalBtn');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const iframe = document.getElementById('videoFrame') as HTMLIFrameElement;
+  const videoSrc = iframe?.dataset.src || '';
+
+  // Abrir modal y cargar el video
+  openBtn?.addEventListener('click', () => {
+    iframe.src = videoSrc; // Carga el video al abrir para que no se reproduzca antes
+    modal?.showModal();
+  });
+
+  // Cerrar modal y limpiar el video (detiene la reproducción)
+  const closeModal = () => {
+    modal?.close();
+    iframe.src = ''; 
+  };
+
+  closeBtn?.addEventListener('click', closeModal);
+
+  // Cerrar si se hace clic fuera del modal (en el backdrop)
+  modal?.addEventListener('click', (event) => {
+    const rect = modal.getBoundingClientRect();
+    const isInDialog = (
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom
+    );
+    if (!isInDialog) {
+      closeModal();
+    }
+  });
+
+  // NUEVO: Detener el video cuando el usuario pulsa la tecla Escape
+  modal?.addEventListener('cancel', (event) => {
+    event.preventDefault(); // Evita el cierre nativo descontrolado
+    closeModal();          // Ejecuta tu función que cierra el modal Y limpia el iframe
+  });
+</script>

@@ -1,19 +1,37 @@
 ---
+import PostImage from "../../components/PostImage.astro";
 import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+
+const title = "Graf 2018";
+const videoUrl = "";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      <video
+        class="w-full aspect-video"
+        loop
+        src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721262/juanlu-castro-animation/graf-2018/graf-2018_e6fuza.mp4"
+        autoplay>
+      </video>
+
+    <!-- TITULO -->
+    <H1>
       Graf 2018
-    </h1>
+    </H1>
+    <!--  -->
+
     <Paragraphs>
+      <div class="px-8 pb-4 md:pb-12">
       <p>
         GRAF is a small press and independent edition festival, where small and
         medium editors, self-edition collectives, graphic artists and fanzines
@@ -25,63 +43,62 @@ import BackButton from "../../components/BackButton.astro";
         editors, artists, collectives or cartoonist who are interested in join
         to next edition.
       </p>
-
-      <!-- Video -->
-      <video
-        class="w-full aspect-video rounded-xl max-w-screen-lg mt-10"
-        loop
-        src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721262/juanlu-castro-animation/graf-2018/graf-2018_e6fuza.mp4"
-        autoplay></video>
+      </div>
 
       <!-- Rough Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
-        Rough Animation
-      </div>
+      <div class="bg-cyan-100  mt-8 pb-12 w-full">
+        <H2>
+          Rough Animation
+        </H2>
+     
       <Grid grid={1}>
         <video
-          class="w-full rounded-xl max-w-screen-lg"
+          class="w-full "
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743087021/juanlu-castro-animation/graf-2018/graf-2018-rough_wm5py9.mp4"
           autoplay></video>
       </Grid>
 
       <!-- Clean Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <H2>
         Clean Animation
-      </div>
+      </H2>
       <Grid grid={2}>
         <video
-          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          class="w-full aspect-square max-w-screen-lg"
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721260/juanlu-castro-animation/graf-2018/G_ndpgdq.mp4"
           autoplay></video>
         <video
-          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          class="w-full aspect-square max-w-screen-lg"
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721260/juanlu-castro-animation/graf-2018/R_tnh87i.mp4"
           autoplay></video>
         <video
-          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          class="w-full aspect-square max-w-screen-lg"
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721260/juanlu-castro-animation/graf-2018/A_bxnl1r.mp4"
           autoplay></video>
         <video
-          class="w-full aspect-square rounded-xl max-w-screen-lg"
+          class="w-full aspect-square max-w-screen-lg"
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1737721265/juanlu-castro-animation/graf-2018/F_vh9rkd.mp4"
           autoplay></video>
       </Grid>
+      
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12  gap-4"
       >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">
+          <H3>
             Direction, design & animation:
-          </p>
+          </H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
+
       </div>
     </Paragraphs>
   </div>

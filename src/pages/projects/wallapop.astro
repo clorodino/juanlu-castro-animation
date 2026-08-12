@@ -4,17 +4,52 @@ import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+    <!-- Video -->
+    <iframe
+      class="w-fit
+      aspect-video"
+      src="https://www.youtube.com/embed/Zh9DZQlSKe8?si=aP1amTZ6GWV4dTXj&controls=0"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+      title="Wallapop FAQ"
+      >
+    </iframe>
+
+    <!-- TITULO -->
+    <H1>
       Wallapop FAQ
-    </h1>
+    </H1>
+    <!--  -->
+
+    <!-- <iframe
+      class="w-fit
+      aspect-video"
+      src="https://www.youtube.com/embed/yBCN_zf0GEc?si=oQB551ENi_tG4_ky&controls=0"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+      title="Wallapop FAQ"
+      >
+    </iframe>
+    <iframe
+      class="w-fit
+      aspect-video"
+      src="https://www.youtube.com/embed/86C14X0xIls?si=1QggXXyscuGzqErN&controls=0"
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+      title="Wallapop FAQ"
+      >
+    </iframe> -->
+
+
     <Paragraphs>
+      <div class="px-8 pb-4 md:pb-12">
       <p>
         Wallapop wanted to make a series of videos to explain the frequently
         asked questions based on some characters they had designed.
@@ -25,110 +60,73 @@ import BackButton from "../../components/BackButton.astro";
           href="https://www.youtube.com/playlist?list=PLJwag2DmJfeQzo5eIY1b6rqq3ItarSCiL"
           target="_blank">Wallapop YouTube channel</a
         >.
-      </p>
+      </div>
 
-      <!-- Video -->
-      <iframe
-        class="w-full
-          aspect-video
-          rounded-xl
-          max-w-screen-lg
-          mt-10
-          outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
-        src="https://www.youtube.com/embed/Zh9DZQlSKe8?si=aP1amTZ6GWV4dTXj&controls=0"
-        title="Wallapop faq"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      >
-      </iframe>
-      <iframe
-        class="w-full aspect-video rounded-xl max-w-screen-lg mt-10
-        outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
-        src="https://www.youtube.com/embed/yBCN_zf0GEc?si=oQB551ENi_tG4_ky&controls=0"
-        title="Wallapop faq"
-        allow="accelerometer; autoplay; clipboard-write;
-        encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      >
-      </iframe>
-      <iframe
-        class="w-full aspect-video rounded-xl max-w-screen-lg mt-10
-        outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
-        src="https://www.youtube.com/embed/86C14X0xIls?si=1QggXXyscuGzqErN&controls=0"
-        title="Wallapop faq"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      >
-      </iframe>
-
-      <!-- Design -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+      <!-- Rough Animation -->
+      <div class="bg-cyan-100  mt-8 pb-12 w-full">
+        <H2>
+          Design
+        </H2>
+     
       <Grid grid={2}>
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
+
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413025/juanlu-castro-animation/wallapop/wallapop-01_rahw8j.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413025/juanlu-castro-animation/wallapop/wallapop-02_gm1dcc.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413027/juanlu-castro-animation/wallapop/wallapop-03_unl3vf.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413024/juanlu-castro-animation/wallapop/wallapop-04_lkn2st.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413028/juanlu-castro-animation/wallapop/wallapop-05_rtxksq.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413026/juanlu-castro-animation/wallapop/wallapop-07_fbgape.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413029/juanlu-castro-animation/wallapop/wallapop-08_rfazh3.png"
           title=""
         />
         <PostImage
-          className="outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10"
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743413027/juanlu-castro-animation/wallapop/wallapop-06_m1qcqd.png"
           title=""
         />
       </Grid>
+      
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12  gap-4"
       >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Direction:</p>
+          <H3>Direction:</H3>
           <p>Tres Studio</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Story:</p>
+          <H3>Story:</H3>
           <p>Pietro Zoli</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Illustration:</p>
+          <H3>Illustration:</H3>
           <p>Ivan Mesaroš</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Animation:</p>
+          <H3>Animation:</H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
+
       </div>
     </Paragraphs>
   </div>

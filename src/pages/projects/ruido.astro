@@ -4,44 +4,52 @@ import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+const title = "Ruido";
+const videoUrl = "89aa4490-f5c7-4351-a38b-d780f0b34441";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
-      Ruido
-    </h1>
-    <Paragraphs>
-      <p>
-        Back in 2020, Antonio Hitos and I started working on an animated video based on some of his characters. At the time, I didn't know it, but what we were actually doing was an animated trailer for one of his best works, "Ruido" (Noise). It wasn't a trailer we initially envisioned as such, and life has led us to revisit and abandon it for various reasons time and time again.
-      </p>
-      <p>
-        Finally, almost two years after the publication of "Ruido," and six years after we started working on it, it's finally finished.
-      </p>
-
-      <!-- Video -->
       <iframe
-        class="w-full
-      aspect-video
-      rounded-xl
-      max-w-screen-lg
-      mt-10"
-        src="https://player.vimeo.com/video/1160822443?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        title="Ruido"
-      >
+        class="w-fit aspect-video"
+        src=`https://framerate.tv/embed/${videoUrl}?muted=1&primary_color=%2523cffafe&track_color=%2523ffffff&theme=minimal`
+        allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen
+        title={title}
+        >
       </iframe>
 
-      <!-- Rough Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
-        Rough Animation
+    <!-- TITULO -->
+    <H1>
+      Ruido
+    </H1>
+    <!--  -->
+
+    <Paragraphs>
+      <div class="px-8 pb-4 md:pb-12">
+        <p>
+          Back in 2020, Antonio Hitos and I started working on an animated video based on some of his characters. At the time, I didn't know it, but what we were actually doing was an animated trailer for one of his best works, "Ruido" (Noise). It wasn't a trailer we initially envisioned as such, and life has led us to revisit and abandon it for various reasons time and time again.
+        </p>
+        <p>
+          Finally, almost two years after the publication of "Ruido," and six years after we started working on it, it's finally finished.
+        </p>
       </div>
-      <Grid grid={1}>
+
+      <!-- Rough Animation -->
+      <div class="bg-cyan-100  mt-8 pb-12 w-full">
+        <H2>
+          Rough Animation
+        </H2>
+     
+      <Grid grid={1} className="pb-2">
         <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980690/juanlu-castro-animation/ruido/Clip_9_b_f3tndy.mp4"
@@ -49,57 +57,58 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
       <Grid grid={2}>
                 <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980470/juanlu-castro-animation/ruido/clip_4_cxm3zp.mp4"
         ></video>
         <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769981040/juanlu-castro-animation/ruido/clip_5_hyengp.mp4"
         ></video>
         <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980468/juanlu-castro-animation/ruido/clip_2_raaunz.mp4"
         ></video>
         <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980473/juanlu-castro-animation/ruido/clip_3_psikek.mp4"
         ></video>
         <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980469/juanlu-castro-animation/ruido/clip_6_dvnr3c.mp4"
         ></video>
                 <video
-          class="rounded-xl"
+          class=""
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1769980470/juanlu-castro-animation/ruido/clip_7_jdu46a.mp4"
         ></video>
       </Grid>
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12  gap-4"
       >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+          <H3>Direction & animation:</H3>
           <p>Juanlu Castro & Antonio Hitos</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Design:</p>
+          <H3>Design:</H3>
           <p>Antonio Hitos</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Clean up, edit, compositing, sound fx and music:</p>
+          <H3>Clean up, edit, compositing, sound fx and music:</H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
 

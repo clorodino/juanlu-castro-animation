@@ -4,18 +4,36 @@ import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+const title = "DHO";
+const videoUrl = "a0964cc9-b470-47b1-9822-6d17db21e168";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      <iframe
+        class="w-fit aspect-video"
+        src=`https://framerate.tv/embed/${videoUrl}?muted=1&primary_color=%2523cffafe&track_color=%2523ffffff&theme=minimal`
+        allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen
+        title={title}
+        >
+      </iframe>
+
+    <!-- TITULO -->
+    <H1>
       DHO
-    </h1>
+    </H1>
+    <!--  -->
+
     <Paragraphs>
-      <p>
+      <div class="px-8 pb-4 md:pb-12">
+        <p>
         A boy spends his time looking for food in a square world until he
         discovers a mysterious thing.
       </p>
@@ -23,23 +41,15 @@ import BackButton from "../../components/BackButton.astro";
         DHO is an animated short film based on a comic book by Lorenzo
         Montatore.
       </p>
+      </div>
 
-      <!-- Video -->
-      <iframe
-        class="w-full
-      aspect-video
-      rounded-xl
-      max-w-screen-lg
-      mt-10"
-        src="https://player.vimeo.com/video/390421885?badge=0&autopause=0&player_id=0&app_id=58479"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        title="Weird Walk"
-      >
-      </iframe>
-
-      <!-- Design -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
-      <Grid grid={1}>
+      <!-- Rough Animation -->
+      <div class="bg-cyan-100  mt-8 pb-12 w-full">
+        <H2>
+          Design
+        </H2>
+     
+      <Grid grid={1} className="pb-2">
         <PostImage
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/DHO_Modelsheet_01_gcmzew.png"
           title="character design"
@@ -55,7 +65,7 @@ import BackButton from "../../components/BackButton.astro";
           title="character design"
         />
       </Grid>
-      <Grid grid={1}>
+      <Grid grid={1} className="pt-2 pb-2">
         <PostImage
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743400754/juanlu-castro-animation/dho/fondo_final_AE_bacgfs.png"
           title="background design"
@@ -73,12 +83,12 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
 
       <!-- Rough Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <H2>
         Rough Animation
-      </div>
-      <Grid grid={1}>
+      </H2>
+
+      <Grid grid={1} className="pb-2">
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400912/juanlu-castro-animation/dho/videos/Shot_022_j2d6g6.mp4"
@@ -86,55 +96,58 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
       <Grid grid={2}>
         <video
-          class="rounded-xl"
+     
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400913/juanlu-castro-animation/dho/videos/Shot_042_h2q8r7.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400913/juanlu-castro-animation/dho/videos/Shot_046_mxqhvc.mp4"
         ></video>
         <video
-          class="rounded-xl"
+        
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400913/juanlu-castro-animation/dho/videos/Shot_010_ilic7w.mp4"
         ></video>
         <video
-          class="rounded-xl"
+       
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743400912/juanlu-castro-animation/dho/videos/Shot_015_qv2kmt.mp4"
         ></video>
       </Grid>
+      
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12  gap-4"
       >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Direction:</p>
+          <H3>Direction:</H3>
           <p>Juanlu Castro & Lorenzo Montatore</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Animation:</p>
+          <H3>Animation:</H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Story & Design:</p>
+          <H3>Story & Design:</H3>
           <p>Lorenzo Montatore</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Sound & Music:</p>
+          <H3>Sound & Music:</H3>
           <p>Javier Colilla Rayon</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Sound Mastering:</p>
+          <H3>Sound Mastering:</H3>
           <p>Raúl Burrueco</p>
         </Paragraphs>
+       
+
       </div>
     </Paragraphs>
   </div>

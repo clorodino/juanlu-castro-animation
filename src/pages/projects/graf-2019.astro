@@ -4,38 +4,48 @@ import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+const title = "Graf 2019";
+const videoUrl = "034310ce-cedd-451d-bb6f-f0d5fef72850";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
+      <iframe
+        class="w-fit aspect-video"
+        src=`https://framerate.tv/embed/${videoUrl}?muted=1&primary_color=%2523cffafe&track_color=%2523ffffff&theme=minimal`
+        allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen
+        title={title}
+        >
+      </iframe>
+
+    <!-- TITULO -->
+    <H1>
       Graf 2019
-    </h1>
+    </H1>
+    <!--  -->
+
     <Paragraphs>
+      <div class="px-8 pb-4 md:pb-12">
       <p>
         In GRAF 2019 Barcelona edition, we made an animated version of the
         poster campaign designed by Lorenzo Montatore which was shown on screens
         inside the event, and also in social media profiles.
       </p>
+      </div>
 
-      <!-- Video -->
-      <iframe
-        class="w-full
-      aspect-video
-      rounded-xl
-      max-w-screen-lg
-      mt-10"
-        src="https://player.vimeo.com/video/323657627?badge=0&autopause=0&player_id=0&app_id=58479"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        title="Weird Walk"
-      >
-      </iframe>
-
-      <!-- Design -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+      <!-- Rough Animation -->
+      <div class="bg-cyan-100  mt-8 pb-12 w-full">
+        <H2>
+          Design
+        </H2>
+     
       <Grid grid={1}>
         <PostImage
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743176401/juanlu-castro-animation/graf-2019/videos/cartel-graf-2019_jpf57t.png"
@@ -46,9 +56,9 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
 
       <!-- Clean Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <H2>
         Clean Animation
-      </div>
+      </H2>
       <Grid grid={1}>
         <video
           class="rounded-xl"
@@ -109,19 +119,22 @@ import BackButton from "../../components/BackButton.astro";
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743176003/juanlu-castro-animation/graf-2019/videos/character-08_kora37.mp4"
         ></video>
       </Grid>
+      
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12  gap-4"
       >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+          <H3>Direction & animation:</H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Illustration:</p>
+          <H3>Illustration:</H3>
           <p>Lorenzo Montatore</p>
         </Paragraphs>
+
       </div>
     </Paragraphs>
   </div>

@@ -1,32 +1,23 @@
 ---
 ---
 
-<a class="back-button opacity-0 flex fixed left-3 top-24 text-lg tracking-wider z-50 transition duration-300 bg-zinc-800 text-cyan-100 ease-out px-3 py-2 rounded-full hover:bg-zinc-500 hover:text-cyan-100 pr-6 font-zalando font-semibold items-center gap-1" href=`/`>
-  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
-   fill="currentColor"
-   ><path d="m385-421 179 179-84 84-322-322 322-322 84 84-179 179h417v118H385Z"/></svg>
-  Back 
-</a>
-
 <button class="back-to-top opacity-0 flex fixed right-3 bottom-14 font-mono text-lg tracking-wider z-50 transition duration-300 bg-zinc-800 text-cyan-100 ease-out px-3 py-2 hover:underline rounded-full h-[44px] items-center hover:bg-zinc-500 hover:text-cyan-100" >
   <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M421-158v-417L242-396l-84-84 322-322 322 322-84 84-179-179v417H421Z"/></svg>
 </button>
 
+
+
 <script>
-  const backButton = document.querySelector('.back-button');
+
   const backToTopButton = document.querySelector('.back-to-top ');
   const navbar = document.querySelector('#navbar');
   window.onscroll = function() {scrollFunction()};
 
   const scrollFunction = () => {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 150) {
-      backButton?.classList.add('opacity-100')
-      backButton?.classList.remove('opacity-0')
       backToTopButton?.classList.add('opacity-100')
       backToTopButton?.classList.remove('opacity-0')
     } else {
-      backButton?.classList.add('opacity-0')
-      backButton?.classList.remove('opacity-100')
       backToTopButton?.classList.add('opacity-0')
       backToTopButton?.classList.remove('opacity-100')
     }

@@ -1,59 +1,61 @@
 ---
 
 import NavLink from "./NavLink.astro";
-import ToggleTheme from "./ToggleTheme.astro";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 export const baseUrl = "";
 ---
 
-<nav class="bg-white border-red dark:bg-gray-900 w-full">
+<nav class=" w-full sticky top-0 z-50 " id="navbar">
+<!-- <nav class=" w-full relative z-50 " id="navbar"> -->
   <div
-    class="flex flex-wrap items-center justify-between mx-auto py-4 relative z-40"
+    class="flex flex-wrap items-center justify-between mx-auto py-6 relative z-60 px-8"
   >
-    <a href=`${baseUrl}/`>
-      <img
-        class="max-w-28 flex justify-center items-center"
-        src=`https://res.cloudinary.com/dtgwzogvc/image/upload/v1743446214/juanlu-castro-animation/logo-jc_ru6emy.svg`
-        alt="logo"
+    <a href=`${baseUrl}/` >
+      <LottieAnimation
+        class="w-16 h-16" 
+        src="../src/assets/logo.json" 
+        autoplay="visible" 
       />
     </a>
-    <button
+<!--  -->
+
+    <button 
+      class="group w-12 h-12 text-cyan-100 text-center items-center justify-center,inset_0_-2px_0_theme(colors.slate.950/.04)] ,0_4px_8px_theme(colors.slate.950/.12),inset_0_-2px_0_theme(colors.slate.950/.04)] transition z-20 md:hidden inline-flex" 
+
+      aria-pressed="false" 
+      onclick="this.setAttribute('aria-pressed', !(this.getAttribute('aria-pressed') === 'true'))"
+
       data-collapse-toggle="navbar-default"
       type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+      class="inline-flex items-center p-2 w-14 h-14 justify-center text-sm text-cyan-100 rounded-xl md:hidden focus:outline-none focus:ring-0 dark:text-cyan-100"
       aria-controls="navbar-default"
       aria-expanded="false"
       id="burger-button"
-    >
-      <span class="sr-only">Open main menu</span>
-      <svg
-        class="w-5 h-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
       >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15"></path>
+      <span class="sr-only">Menu</span>
+      <svg aria-hidden="true" class="w-9 h-9 fill-current pointer-events-none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <rect class="origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-x-0 group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[315deg]" y="7" width="9" height="2" rx="0"></rect>
+          <rect class="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-[[aria-pressed=true]]:rotate-45" y="7" width="16" height="2" rx="0"></rect>
+          <rect class="origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:-rotate-[225deg]" y="7" width="9" height="2" rx="0"></rect>
       </svg>
     </button>
+
+<!--  -->
+
     <div
       id="nav-container"
-      class="md:translate-y-0 md:h-8 md:relative md:block md:w-auto md:top-0 w-full overflow-hidden h-[calc(100vh-80px)] absolute top-20 left-0 hidden"
+      class="md:translate-y-0 md:h-8 md:relative md:block md:w-auto md:top-0 w-full overflow-hidden h-dvh absolute top-0 left-0 hidden"
     >
       <div
-        class="w-full transition-transform duration-300 ease-in-out md:block md:w-auto h-screen bg-white md:h-8 md:relative absolute top-0 z-10 md:translate-y-0 -translate-y-full left-0 dark:bg-gray-900"
+        class="w-full transition-transform duration-300 ease-in-out md:block md:w-auto h-screen md:h-8 md:relative absolute top-0 z-60 md:translate-y-0 -translate-y-full left-0 flex justify-center items-center bg-zinc-900 md:bg-transparent"
         id="navbar-default"
       >
         <ul
-          class="flex gap-8 items-center font-mono text-2xl tracking-wider md:flex-row flex-col md:pt-0 pt-10"
+          class="flex gap-8 items-center text-2xl tracking-wider md:flex-row flex-col md:pt-0 pt-10 text-slate-50"
         >
           <NavLink link=`${baseUrl}/about` title="About" />
           <NavLink link=`${baseUrl}/` title="Work" />
-          <ToggleTheme />
+          <!-- <ToggleTheme /> -->
         </ul>
       </div>
     </div>

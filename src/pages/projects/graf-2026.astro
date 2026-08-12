@@ -4,38 +4,43 @@ import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+const title = "Graf 2026";
+const videoUrl = "59894535-d471-4677-9334-e9fcdd1c1077";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
-      Graf 2026
-    </h1>
-    <Paragraphs>
-      <p>
-        Graf 2026 brought with an amazing poster designed by Iván McGill. 
-        Based in these cool characters, we made the all the animated pieces showed in social media and the event.
-
-      </p>
-
-      <!-- Video -->
       <iframe
-        class="w-full
-      aspect-video
-      rounded-xl
-      max-w-screen-lg
-      mt-10"
-        src="https://player.vimeo.com/video/1179264258?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        title="Graf"
-      >
+        class="w-fit aspect-video"
+        src=`https://framerate.tv/embed/${videoUrl}?muted=1&primary_color=%2523cffafe&track_color=%2523ffffff&theme=minimal`
+        allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen
+        title={title}
+        >
       </iframe>
 
+    <H1>
+      Graf 2026
+    </H1>
+    <Paragraphs>
+       <div class="px-8 pb-4 md:pb-12">
+         <p>
+           Graf 2026 brought with an amazing poster designed by Iván McGill. 
+           Based in these cool characters, we made the all the animated pieces showed in social media and the event.
+   
+         </p>
+       </div>
+
       <!-- Design -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+       <div >
+      <H2>Design</H2>
+      <div>
       <Grid grid={1}>
         <PostImage
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/q_auto/f_auto/v1775058823/juanlu-castro-animation/graf-2026/poster-graf-2026_ct5smz.png"
@@ -46,45 +51,40 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
 
       <!-- Final  -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <div class="bg-cyan-100  mt-8 pt-2 pb-12 w-full">
+      <H2>
         Final Animation 
-      </div>
+      </H2>
      
       <Grid grid={2}>
       <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775568550/juanlu-castro-animation/graf-2026/Cornelius_-_color_sn1jfd.mp4"
         ></video>
       <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569646/juanlu-castro-animation/graf-2026/Helicoptero_-_color_w9ro6l.mp4"
         ></video>
       <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569954/juanlu-castro-animation/graf-2026/Hormigonera_-_color_a4iled.mp4"
         ></video>
       <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775570262/juanlu-castro-animation/graf-2026/Grapa_-_color_t9rc10.mp4"
         ></video>
       </Grid>
-      <Grid grid={1}>
+      <Grid grid={1} className="pt-2">
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775572498/juanlu-castro-animation/graf-2026/Cuerpo_-_Color_pfbqha.mp4"
         ></video>        
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775573484/juanlu-castro-animation/graf-2026/Logo_-_color_dp6qke.mp4"
@@ -92,45 +92,39 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
 
       <!-- Clean Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <H2>
         Clean Animation
-      </div>
+      </H2>
      
       <Grid grid={2}>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775568550/juanlu-castro-animation/graf-2026/Cornelius_-_clean_ixgl79.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569644/juanlu-castro-animation/graf-2026/Helicoptero_-_clean_gwwsoa.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569958/juanlu-castro-animation/graf-2026/Hormigonera_-_clean_n4sthm.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775570265/juanlu-castro-animation/graf-2026/Grapa_-_clean_y6foll.mp4"
         ></video>
       </Grid>
-      <Grid grid={1}>
+      <Grid grid={1} className="pt-2">
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775572497/juanlu-castro-animation/graf-2026/Cuerpo_-_Clean_zgnfvn.mp4"
         ></video>        
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775573483/juanlu-castro-animation/graf-2026/Logo_-_clean_unh9uo.mp4"
@@ -138,52 +132,51 @@ import BackButton from "../../components/BackButton.astro";
       </Grid>
 
       <!-- Rough Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <H2>
         Rough Animation
-      </div>
+      </H2>
 
       <Grid grid={2}>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569415/juanlu-castro-animation/graf-2026/Cornelius_-_rough_fsis5v.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569646/juanlu-castro-animation/graf-2026/Helicoptero_-_rough_wsscdq.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775569955/juanlu-castro-animation/graf-2026/Hormigonera_-_rough_d7hirs.mp4"
         ></video>
         <video
-          class="rounded-xl"
           autoplay
           loop
           src="https://res.cloudinary.com/dtgwzogvc/video/upload/q_auto/f_auto/v1775576028/juanlu-castro-animation/graf-2026/Grapa_-_rough_kywaxr.mp4"
         ></video>
         
       </Grid>
+      </div>
+      </div>
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12 gap-4"
       >
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+          <H3>Direction & animation:</H3>
           <p>Juanlu Castro & Iván McGill</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Design:</p>
+          <H3>Design:</H3>
           <p>Iván McGill</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Clean up, edit, compositing, sound fx and music:</p>
+          <H3>Clean up, edit, compositing, sound fx and music:</H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
 

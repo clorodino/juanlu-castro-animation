@@ -4,77 +4,91 @@ import Layout from "../../layouts/Layout.astro";
 import Grid from "../../components/Grid.astro";
 import Paragraphs from "../../components/Paragraphs.astro";
 import BackButton from "../../components/BackButton.astro";
+import H1 from "../../components/H1.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+const title = "Graf 2020";
+const videoUrl = "777f3f60-9f81-4d8c-9522-b934762336e0";
 ---
 
 <Layout>
-  <BackButton   />
+  <BackButton/>
   <div
-    class="flex flex-col justify-center items-start max-w-screen-lg gap-4 mt-24 w-full"
+    class="flex flex-col items-start gap-4 w-full"
   >
-    <h1 class="text-4xl font-mono font-medium pt-10 pb-3 tracking-normal">
-      Graf 2020
-    </h1>
-    <Paragraphs>
-      <p>
-        Animated poster version for GRAF 2020 Barcelona by Marta Cartu.
-        Unfortunately, it was never shown at the festival due to COVID-19.
-      </p>
-
-      <!-- Video -->
       <iframe
-        class="w-full
-      aspect-video
-      rounded-xl
-      max-w-screen-lg
-      mt-10"
-        src="https://player.vimeo.com/video/419920448?badge=0&autopause=0&player_id=0&app_id=58479"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        title="Weird Walk"
-      >
+        class="w-fit aspect-video"
+        src=`https://framerate.tv/embed/${videoUrl}?muted=1&primary_color=%2523cffafe&track_color=%2523ffffff&theme=minimal`
+        allow="autoplay; fullscreen; picture-in-picture" 
+        allowfullscreen
+        title={title}
+        >
       </iframe>
 
-      <!-- Design -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">Design</div>
+    <!-- TITULO -->
+    <H1>
+      Graf 2020
+    </H1>
+    <!--  -->
+
+    <Paragraphs>
+      <div class="px-8 pb-4 md:pb-12">
+        <p>
+          Animated poster version for GRAF 2020 Barcelona by Marta Cartu.
+          Unfortunately, it was never shown at the festival due to COVID-19.
+        </p>
+      </div>
+
+      <!-- Rough Animation -->
+      <div class="bg-cyan-100  mt-8 pb-12 w-full">
+        <H2>
+          Design
+        </H2>
+     
       <Grid grid={1}>
         <PostImage
           src="https://res.cloudinary.com/dtgwzogvc/image/upload/v1743178497/juanlu-castro-animation/graf-2020/graf-2020-poster_xqoaxz.png"
           title=""
           style="flex justify-center items-center"
-          className="max-w-screen-sm"
+          className="max-w-screen-sm "
         />
       </Grid>
 
       <!-- Clean Animation -->
-      <div class="italic border-t pt-4 border-neutral-300 mt-8">
+      <H2>
         Clean Animation
-      </div>
+      </H2>
       <Grid grid={1}>
         <div class="flex justify-center items-center">
           <video
-            class="rounded-xl w-full max-w-screen-sm"
+            class="w-full max-w-screen-sm"
             autoplay
             loop
             src="https://res.cloudinary.com/dtgwzogvc/video/upload/v1743181342/juanlu-castro-animation/graf-2020/graf-2020-animated-poster_oazt6b.mp4"
           ></video>
         </div>
       </Grid>
+      
+      </div>
 
       <!-- Credits -->
       <div
-        class="mt-12 mb-5 flex flex-col justify-center items-start border-t pt-6 border-neutral-300"
+        class="w-full px-8 flex flex-col justify-center items-start py-12  gap-4"
       >
-        <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Direction & animation:</p>
+         <Paragraphs>
+          <H3>Direction & animation:</H3>
           <p>Juanlu Castro</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Illustration:</p>
+          <H3>Illustration:</H3>
           <p>Marta Cartu</p>
         </Paragraphs>
         <Paragraphs>
-          <p class="text-sm text-gray-400 font-light">Music & sound design:</p>
+          <H3>Music & sound design:</H3>
           <p>Raúl Burrueco</p>
         </Paragraphs>
+       
+
       </div>
     </Paragraphs>
   </div>

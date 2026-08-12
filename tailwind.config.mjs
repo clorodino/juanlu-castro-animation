@@ -17,6 +17,10 @@ export default {
           },
         },
       },
+      fontFamily: {
+        host: ["Host Grotesk", "sans-serif"],
+        zalando: ["Zalando Sans Expanded Variable", "sans-serif"],
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

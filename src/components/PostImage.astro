@@ -11,13 +11,13 @@ const { src, title, className, style, border } = Astro.props;
 
 <div
   class:list={[
-    src === "" && "bg-neutral-100 rounded-xl w-full aspect-video",
+    src === "" && "bg-neutral-100 w-full aspect-video",
     style,
   ]}
 >
   <img
     class:list={[
-      "w-full overflow-hidden rounded-xl object-center object-cover ",
+      "w-full overflow-hidden object-center object-cover ",
       border &&
         "outline outline-1 -outline-offset-1 outline-neutral-300 dark:outline-neutral-950/10",
       className,
