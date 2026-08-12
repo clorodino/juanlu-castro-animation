@@ -20,8 +20,8 @@ const { buttonText = "Ver video", videoUrl, class: className } = Astro.props;
 </button>
 
 <!-- Elemento nativo dialog de HTML estilizado con Tailwind -->
-<dialog id="videoModal" class="p-0 backdrop:bg-zinc-900/90 max-w-6xl w-full bg-black">
-  <div class="relative flex flex-col bg-zinc-900 text-white overflow-hidden">
+<dialog id="videoModal" class="p-0 backdrop:bg-zinc-900/95 max-w-6xl w-full bg-black">
+  <div class="relative flex flex-col  text-white overflow-hidden">
     
     <!-- Botón de cierre -->
     <button 
@@ -45,6 +45,7 @@ const { buttonText = "Ver video", videoUrl, class: className } = Astro.props;
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen
       ></iframe>
+
     </div>
 
   </div>
